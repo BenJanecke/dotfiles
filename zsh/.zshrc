@@ -12,15 +12,20 @@ ZSH_THEME="thatotherben"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias sst='subl .'
 alias ls='ls --color'
-alias yolo='ga . '
+alias yolo='ga . && gc'
 alias startmongo='mongod --config /usr/local/opt/mongodb/mongod.conf'
 alias msqs='mysql.server start'
 alias msqst='mysql.server stop'
-alias cdcontiki='cd ~/Documents/Work/contiki'
-alias sshuat='ssh deploy@uat01.c45383.blueboxgrid.com'
 alias be='bundle exec'
+alias lst='tree -L 1'
 alias cpcfg='ls config | grep .yml.example | sed s/.example//g | xargs -I {} cp config/{}.example config/{}'
-alias bereak='be rake'
+alias work='cd ~/Documents/work'
+alias personal='cd ~/Documents/personal'
+alias ao='atom .'
+alias bap='cd ~/Documents/work/business_app'
+alias polarbear='cd ~/Documents/personal/polarbear'
+alias whatsmyip=`ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p' | cat`
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -55,17 +60,20 @@ plugins=(rails git ruby brew rake osx nvm)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 eval "$(rbenv init -)"
 
-[[ -s /Users/benjanecke/.nvm/nvm.sh ]] && . /Users/benjanecke/.nvm/nvm.sh # This loads NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # Damm postgres
 export PGHOST=localhost
+
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-# FFS
+export PATH="$PATH:/usr/local/heroku/bin"
+
+# FFS ALL THE UTF-8!
 export CLICOLOR=1
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8

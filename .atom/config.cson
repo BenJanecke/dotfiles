@@ -1,0 +1,27 @@
+"*":
+  "exception-reporting":
+    userId: "5ddf9335-d899-103d-e3cd-f48de141d335"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "atom-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    fontFamily: "Anonymous Pro"
+    fontSize: 24
+  react: {}
+  minimap: {}
+  linter: {}
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
+  pigments:
+    supportedFiletypes: [
+      ".css .scss .css.scsss .sass .css.sass .less"
+    ]
+  "git-blame":
+    columnWidth: 420

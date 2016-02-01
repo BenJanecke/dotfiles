@@ -22,9 +22,8 @@ alias cpcfg='ls config | grep .yml.example | sed s/.example//g | xargs -I {} cp 
 alias work='cd ~/Documents/work'
 alias personal='cd ~/Documents/personal'
 alias ao='atom .'
-alias bap='cd ~/Documents/work/business_app'
 alias polarbear='cd ~/Documents/personal/polarbear'
-alias whatsmyip=`ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p' | cat`
+alias whatsmyip=`ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'`
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -55,14 +54,12 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git ruby brew rake osx nvm)
+plugins=(git brew osx nvm)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
-eval "$(rbenv init -)"
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
